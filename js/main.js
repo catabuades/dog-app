@@ -9,6 +9,10 @@ const spinner = document.querySelector(".app-spinner");
 
 function init() {
 
+  showSpinner();
+
+  image.addEventListener("load", showImage);
+
   fetch(dogApiList)
     .then(function(listResponse) {
       return listResponse.json();
