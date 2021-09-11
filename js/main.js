@@ -5,6 +5,7 @@ const dogApiRandomUrlWhenSelectedOption = "";
 const container = document.querySelector(".app-container");
 const select = document.querySelector(".app-select");
 const image = document.querySelector(".app-image");
+const spinner = document.querySelector(".app-spinner");
 
 function init() {
 
@@ -35,9 +36,23 @@ function init() {
 
   select.addEventListener("change", breedSelectedOption);
 
+  image.addEventListener("load", showImage);
+
+  function showImage() {
+    image.classList.add("show");
+    spinner.classList.remove("show");
+  }
+
+  function showSpinner() {
+    image.classList.remove("show");
+    spinner.classList.add("show");
+  }
+
   function breedSelectedOption(e) {
     const optionSelected = e.target.value;
     const dogApiRandomUrlWhenSelectedOption = "https://dog.ceo/api/breed/"+optionSelected+"/images/random";
+
+    showSpinner();    
   
     fetch(dogApiRandomUrlWhenSelectedOption)
       .then(function(selectedOptionResponse) {
@@ -47,6 +62,8 @@ function init() {
         image.src = selectedOptionResponse.message;
       });
   }
+
+
 }
 
 init();
