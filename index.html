@@ -15,7 +15,9 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;600&family=Fredoka+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 
@@ -25,18 +27,23 @@
 <body>
   <header>
     <h1>Looking for a DOG</h1>
-    <select class="app-select breedNav">
-      <option>---</option>
-    </select>
+    <div>
+      <select class="app-select breedNav">
+        <option>---</option>
+      </select>
+    </div>
   </header>
   
   <section class="app-container contentSection">
     <img class="app-image contentSection__image" src="" alt="">
-    <div class="app-spinner contentSection__spinner show">🐶</div>
+    <p class="app-caption"></p>
   </section>
 
   <footer>
-    <a href="https://dog.ceo/dog-api/" title="Dog Api">Dog Api</a>
+    <a href="https://dog.ceo/dog-api/" title="Dog Api" class="dogApi">
+      <img src="img/dog-api-logo.svg" alt="Dog Api Logo">
+      Dog Api
+    </a>
   </footer>
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>

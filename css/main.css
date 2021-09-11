@@ -261,3 +261,74 @@ textarea {
   }
 }
 
+/* ---------------------------- */
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ede7d9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  max-height: 120px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+header h1 {
+  margin: 0 0 1rem 0;
+  font-family: 'Fredoka One', cursive;
+}
+
+header select {
+  width: 100%;
+  max-width: 300px;
+  height: 2rem;
+  font-family: 'Catamaran', sans-serif;
+}
+
+header select {
+  outline-color: #d5a021;
+}
+
+.contentSection {
+  width: 90%;
+  max-width: 650px;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+.contentSection__image {
+  width: auto;
+  max-height: 65vh;
+  margin: 0 auto;
+  display: block;
+  border-radius: 10px;
+  border: 4px solid #FFFFFF;
+}
+
+footer {
+  padding: 0 1rem 1rem;
+}
+
+footer .dogApi img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+footer .dogApi {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-family: 'Catamaran', sans-serif;
+  text-decoration: none;
+  color: #222222;
+  font-weight: 600;
+}
+
+footer .dogApi:hover {
+  text-decoration: underline;
+}
